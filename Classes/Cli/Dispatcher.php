@@ -113,7 +113,7 @@ Currently the following commands are supported:
 			$method = new ReflectionMethod(get_class($this), $command);
 
 			//check number of required arguments 
-			if ($method->getNumberOfRequiredParameters() !== count($args)) {
+			if ($method->getNumberOfRequiredParameters() > count($args)) {
 				throw new InvalidArgumentException('Wrong number of arguments');
 			}
 

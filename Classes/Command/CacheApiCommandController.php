@@ -61,7 +61,7 @@ class Tx_Coreapi_Command_CacheApiCommandController extends Tx_Extbase_MVC_Contro
 	 *
 	 * @return void
 	 */
-	public function clearPageCacheCommand() {
+	public function clearPageCacheCommand($pid = FALSE) {
 		/** @var $service Tx_Coreapi_Service_CacheApiService */
 		$service = $this->objectManager->get('Tx_Coreapi_Service_CacheApiService');
 		$service->clearPageCache();

@@ -64,8 +64,8 @@ class Tx_Coreapi_Service_CacheApiService {
 	/**
 	 *
 	 */
-	public function clearPageCache() {
-		$this->tce->clear_cacheCmd('pages');
+	public function clearPageCache($pid = FALSE) {
+		$this->tce->clear_cacheCmd($pid !== FALSE ? $pid : 'pages');
 	}
 
 	/**
